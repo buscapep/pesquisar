@@ -97,7 +97,9 @@
 .about-features {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    height: 100%;
+    gap: 25px;
+    justify-content: center;
 }
 
 .about-feature {
