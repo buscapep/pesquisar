@@ -41,38 +41,3 @@ A condição de Pessoa Exposta Politicamente possui natureza regulatória e est�
 
 A presença de uma pessoa na base do BuscaPEP não constitui acusação, suspeita ou declaração de prática de crime, ilícito ou irregularidade.
 
----
-
-## 🗂️ Estrutura do projeto
-
-```text
-pep-search/
-│
-├── assets/
-│
-├── compliance/
-│   ├── contato.html
-│   ├── privacidade.html
-│   ├── termos.html
-│   └── tratamento.html
-│
-├── css/
-│
-├── images/
-│
-├── js/
-│   └── app.js
-│
-├── json/
-│   ├── pep_1.json
-│   ├── pep_2.json
-│   ├── pep_3.json
-│   ├── pep_4.json
-│   └── relacionados.json
-│
-├── tools/
-│
-├── index.html
-├── robots.txt
-├── sitemap.xml
-└── README.md
