@@ -1,0 +1,106 @@
+
+/* =========================================
+   QUEBRA VISUAL
+   ========================================= */
+
+.visual-break {
+    position: relative;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background-image: url("../image/img-1.jfif");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.visual-break-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 32, 58, 0.94) 0%,
+            rgba(15, 32, 58, 0.78) 45%,
+            rgba(15, 32, 58, 0.38) 100%
+        );
+}
+
+.visual-break-content {
+    position: relative;
+    z-index: 1;
+
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 70px 0;
+
+    color: #fff;
+}
+
+.visual-break-label {
+    display: block;
+    margin-bottom: 16px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.visual-break h2 {
+    max-width: 650px;
+    margin: 0;
+
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+    .visual-break {
+        min-height: 280px;
+    }
+
+    .visual-break-content {
+        width: calc(100% - 32px);
+        padding: 55px 0;
+    }
+
+    .visual-break h2 {
+        font-size: 30px;
+    }
+}
+
+.visual-break::after {
+    content: "";
+    position: absolute;
+    right: -120px;
+    bottom: -180px;
+
+    width: 520px;
+    height: 520px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+}
+
+.visual-break::before {
+    content: "";
+    position: absolute;
+    right: 80px;
+    top: -260px;
+
+    width: 420px;
+    height: 420px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+

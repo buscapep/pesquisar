@@ -1,0 +1,142 @@
+/* =========================================================
+   ÁREA DE CONTEÚDO
+   ========================================================= */
+
+.content-layout {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) minmax(0, 1000px) minmax(180px, 1fr);
+    gap: 24px;
+    padding: 2%;
+    align-items: start;
+}
+
+.main {    
+    min-width: 920px;
+}
+
+
+/* =========================================================
+   PUBLICIDADE LATERAL
+   ========================================================= */
+
+.ad-sidebar {
+    width: 180px;
+    position: sticky;
+    top: 100px;
+}
+
+.ad-left {
+    justify-self: start;
+}
+
+.ad-right {
+    justify-self: end;
+}
+
+.ad-sidebar img {
+    display: block;
+    width: 160px;
+    height: 600px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   PUBLICIDADE HORIZONTAL
+   ========================================================= */
+
+.ad-horizontal {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 24px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ad-horizontal img {
+    display: block;
+
+    width: 100%;
+    max-width: 970px;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+.ad-horizontal {
+    display: none;
+}
+
+
+/* =========================================================
+   IDENTIFICAÇÃO DA PUBLICIDADE
+   ========================================================= */
+
+.ad-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: #888;
+}
+
+
+
+
+/* =========================================================
+   TELA ESTREITA
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .ad-sidebar {
+        display: none;
+    }
+
+    .ad-horizontal {
+        display: block;
+        width: calc(100% - 32px);
+        margin: 20px auto;
+    }
+}
+
+
+/* =========================================================
+   TABLETS / CELULARES
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .ad-horizontal {
+        width: calc(100% - 32px);
+        margin: 20px auto;
+    }
+
+    .ad-horizontal img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 320 / 100;
+    }
+}

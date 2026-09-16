@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BUSCAPEP — Consulta de PEPs e Relacionados</title>
+
+    <meta name="description" content="BuscaPEP é uma ferramenta online para consulta pública de Pessoas Expostas Politicamente (PEPs), com pesquisa por nome e informações provenientes de fontes públicas.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="BuscaPEP">
+    <link rel="canonical" href="https://buscapep.github.io/pesquisar/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BuscaPEP | Consulta Pública de PEPs">
+    <meta property="og:description" content="Consulte informações públicas sobre Pessoas Expostas Politicamente (PEPs) por nome, com dados provenientes de fontes públicas e oficiais.">
+    <meta property="og:url" content="https://buscapep.github.io/pesquisar/">
+    <meta property="og:site_name" content="BuscaPEP">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="https://buscapep.github.io/amounter/images/og-buscapep.jfif">
+
+
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/ads.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/search-area.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/advertising.css">
+    <link rel="stylesheet" href="css/results.css">
+    <link rel="stylesheet" href="css/methodology.css">
+    <link rel="stylesheet" href="css/visual-break.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google AdSense
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
+    -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C39EV2SLS0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-C39EV2SLS0');
+    </script>
+
+</head>
+
+<body>
+
+    <!-- =========================================
+    HEADER
+    ========================================= -->
+
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="#" class="brand" aria-label="BUSCAPEP - página inicial">
+                <span class="brand-text">
+                    BUSCA<strong class="destaque-cor">PEP</strong>
+                </span>
+                <span class="brand-mark">
+                    <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="3" />
+                        <path d="M16.5 16.5L21 21" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" />
+                    </svg>
+                </span>
+            </a>
+
+            <nav class="main-nav" aria-label="Navegação principal">
+                <a onclick="rolarpara('.hero-search')">Consulta</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+
+            <div class="header-status">
+                <span class="status-dot"></span>Serviço disponível
+            </div>
+
+        </div>
+    </header>
+
+    <!-- =========================================
+    HERO / IMPACTO INICIAL
+    ========================================= -->
+
+    <section id="consulta" class="hero">
+        <!-- Imagem de abertura -->
+
+        <div class="hero-visual">
+
+            <div class="hero-image"></div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-visual-content">
+
+                <div class="hero-copy">
+                    <span class="hero-eyebrow">Pessoas Expostas Politicamente</span>
+                    <h1>
+                        Identifique
+                        <span>
+                            PEPs
+                        </span>
+                    </h1>
+
+
+                    <p class="ct">
+                        Consulte informações públicas de forma simples
+                        e objetiva para apoiar processos de KYC,
+                        PLD/FTP e diligência cadastral.
+                    </p>
+
+                    <button type="button" class="hero-action" id="startSearchBtn" onclick="rolarpara('.hero-search')">
+
+                        <span>Iniciar consulta</span>
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M5 12H19" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M13 6L19 12L13 18" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+    CONTEÚDO
+    ========================================= -->
+
+    <div class="content-layout">
+        <aside class="ad-sidebar ad-left">
+            <div class="ad-slot"><img src="../assets/ads/banner-lateral-01.jfif" alt="Publicidade"></div>
+        </aside>
+
+        <main>
+
+            <!-- =====================================
+        ÁREA DE PESQUISA
+        ===================================== -->
+
+            <div class="hero-search">
+
+                <div class="container">
+
+
+                    <div class="search-intro">
+
+                        <span class="section-kicker">
+                            CONSULTA
+                        </span>
+
+
+                        <h2>
+                            Pesquise pelo nome
+                        </h2>
+
+
+                        <p>
+                            Encontre registros de Bases Públicas
+                        </p>
+
+                    </div>
+
+
+                    <div class="search-area">
+                        <div class="search-box">
+                            <div class="search-input-wrapper">
+                                <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2" />
+                                    <path d="M16.5 16.5L21 21" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                                <input type="text" id="searchInput" placeholder="Nome ou CPF" autocomplete="off"
+                                    aria-label="Pesquisar PEP por nome ou CPF">
+                                <button id="clearBtn" class="clear-btn hidden" type="button"
+                                    aria-label="Limpar pesquisa">×</button>
+                            </div>
+
+                            <button id="searchBtn" class="search-button" type="button">
+                                <span>Pesquisar</span>
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M5 12H19" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M13 6L19 12L13 18" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="search-note">
+                            Nomes completos apresentam melhores correspondências
+                        </div>
+                    </div>
+
+
+                    <div id="loadingState" class="loading-state hidden">
+                        <span class="loading-spinner"></span>
+                        <span>Consultando registros...</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- =========================================
+        RESULTADOS
+        ========================================= -->
+
+            <section class="results-section" id="results-section">
+
+                <div class="container">
+
+
+                    <div class="results-header">
+
+                        <div>
+
+                            <span class="section-kicker">
+                                RESULTADOS
+                            </span>
+
+
+                            <h2 id="resultsHeading">
+                                Registros encontrados
+                            </h2>
+
+
+                            <p id="resultsSub">
+                                Realize uma pesquisa para visualizar os
+                                registros correspondentes.
+                            </p>
+
+                        </div>
+
+                        <div id="counterBadge" class="results-counter hidden">
+
+                            <strong id="resultsCount">
+                                0
+                            </strong>
+
+                            <span>
+                                registros
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="resultsGrid" class="results-grid">
+                        <!-- Resultados gerados pelo JavaScript -->
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+
+        <aside class="ad-sidebar ad-right">
+            <div class="ad-slot">
+                <div class="ad-slot"><img src="../assets/ads/banner-lateral-01.jfif" alt="Publicidade"></div>
+            </div>
+        </aside>
+    </div>
+
+
+
+    <!-- =========================================
+    ABOUT
+    =========================================== -->
+
+    <section class="about-section" id="sobre">
+        <div class="about-container">
+
+            <div class="about-header">
+                <span class="section-kicker">SOBRE O BUSCAPEP</span>
+
+                <h2>
+                    Informação pública para
+                    <span>análise e diligência</span>
+                </h2>
+
+                <p class="jf">
+                    O BUSCAPEP é uma iniciativa independente voltada à organização
+                    e à consulta de informações públicas sobre Pessoas Expostas
+                    Politicamente (PEPs) e pessoas relacionadas, com o objetivo de
+                    facilitar pesquisas utilizadas em processos de análise cadastral,
+                    integridade e avaliação de riscos.
+                </p>
+            </div>
+
+            <div class="about-content">
+
+                <div class="about-text">
+                    <h3>Para que essas informações servem?</h3>
+
+                    <p class="jf">
+                        A identificação de uma Pessoa Exposta Politicamente é um
+                        elemento relevante em processos de <strong>Know Your Customer
+                            (KYC)</strong>, diligência cadastral, gestão de riscos e
+                        programas de <strong>Prevenção à Lavagem de Dinheiro e ao
+                            Financiamento do Terrorismo (PLD/FTP)</strong>.
+                    </p>
+
+                    <h3>Quem é considerado PEP?</h3>
+
+                    <p class="jf">
+                        São consideradas PEPs as pessoas que ocupam ou tenham
+                        ocupado cargos e funções públicas enquadrados nas
+                        categorias previstas na legislação e regulamentação
+                        aplicáveis.
+                    </p>
+
+                    <p class="jf">
+                        No BUSCAPEP, o titular é a pessoa identificada no registro como ocupante do cargo ou função
+                        pública que fundamenta sua classificação como PEP, juntamente com as informações relativas
+                        ao exercício dessa função.
+                    </p>
+
+                    <h3>Período de enquadramento</h3>
+                    <p class="jf">
+                        Para os segmentos submetidos à Resolução COAF nº 40/2021, a condição de PEP permanece por 5
+                        anos contados da data em que a pessoa deixa de se enquadrar nos critérios previstos na
+                        norma.
+                    </p>
+                </div>
+
+                <div class="about-features">
+
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h3>Due Diligence</h3>
+                            <p>
+                                Apoio à verificação cadastral e à coleta de informações
+                                relevantes durante processos de diligência.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            ◇
+                        </div>
+
+                        <div>
+                            <h3>Gestão de riscos</h3>
+                            <p>
+                                Subsídio para análises de risco relacionadas a clientes,
+                                parceiros, fornecedores e demais relacionamentos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            ⌕
+                        </div>
+
+                        <div>
+                            <h3>Pesquisa e monitoramento</h3>
+                            <p>
+                                Facilitação da pesquisa de registros públicos em
+                                processos de KYC, compliance e PLD/FTP.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="about-notice">
+                <strong>Finalidade da consulta:</strong>
+                as informações disponibilizadas pelo BUSCAPEP devem ser utilizadas
+                como elemento de apoio à análise. A classificação como PEP ou pessoa
+                relacionada não constitui, isoladamente, evidência de irregularidade,
+                ilícito ou risco.
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================================
+    FOOTER
+    =========================================== -->
+
+    <footer id="contato" class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+
+                    <a href="#" class="brand" aria-label="BUSCAPEP - página inicial">
+
+                        <span class="brand-mark">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                <path d="M12 3L19 6V11C19 15.5 16.2 19.4 12 21C7.8 19.4 5 15.5 5 11V6L12 3Z" fill="none"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+
+                                <path d="M9 12L11 14L15 10" fill="none" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+
+                            </svg>
+
+                        </span>
+
+
+                        <span class="brand-text">
+                            BUSCAPEP
+                        </span>
+
+                    </a>
+
+
+                    <p>
+                        Plataforma de consulta e organização de informações
+                        disponíveis em fontes públicas.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Plataforma
+                    </h3>
+
+                    <a onclick="rolarpara('.hero-search')">
+                        Consulta
+                    </a>
+
+                    <a onclick="rolarpara('.about-section')">
+                        Sobre
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Informações
+                    </h3>
+
+                    <a href="compliance/privacidade.html">
+                        Política de Privacidade
+                    </a>
+
+                    <a href="compliance/termos.html">
+                        Termos de Uso
+                    </a>
+
+                    <a href="compliance/tratamento.html">
+                        Tratamento de Dados
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Contato
+                    </h3>
+
+                    <a href="compliance/contato.html">
+                        Fale com a equipe
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 BUSCAPEP.
+                    Todos os direitos reservados.
+                </span>
+
+
+                <span>
+                    Informações de caráter público e informativo.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

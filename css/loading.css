@@ -1,0 +1,28 @@
+/* =========================================================
+LOADING
+========================================================= */
+
+.loading-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    margin-top: 18px;
+    color: var(--color-primary);
+    font-size: 0.78rem;
+}
+
+.loading-spinner {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #d9e4ee;
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: loading-spin 0.75s linear infinite;
+}
+
+@keyframes loading-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,212 @@
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    background: #f8fafc;
+}
+
+
+/* =========================================
+   IMPACTO VISUAL
+   ========================================= */
+
+.hero-visual {
+    position: relative;
+    min-height: 620px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../image/img-1.jfif");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(9, 25, 47, 0.94) 0%,
+            rgba(9, 25, 47, 0.82) 42%,
+            rgba(9, 25, 47, 0.42) 100%
+        );
+}
+
+.hero-visual-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-copy {
+    max-width: 680px;
+    padding: 110px 0;
+    color: #fff;
+}
+
+.hero-eyebrow {
+    display: inline-block;
+    margin-bottom: 24px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.hero-copy h1 {
+    margin: 0;
+
+    font-size: clamp(46px, 6vw, 72px);
+    line-height: 1.04;
+    font-weight: 700;
+    letter-spacing: -0.045em;
+}
+
+.hero-copy h1 span {
+    display: block;
+    color: #8eb3ff;
+}
+
+.hero-copy p {
+    max-width: 580px;
+    margin: 28px 0 0;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   BOTÃO DO HERO
+   ========================================= */
+
+.hero-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 34px;
+    padding: 14px 20px;
+
+    border: 0;
+    border-radius: 9px;
+
+    background: linear-gradient(135deg, #ebebeb, #fff, #fff);
+    color: #173b82;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    opacity: .90;
+
+    transition:
+        opacity 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.hero-action:hover {
+    opacity: 1;
+    transition: 500ms;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.hero-action svg {
+    width: 17px;
+    height: 17px;
+}
+
+
+/* =========================================
+   ÁREA DE PESQUISA
+   ========================================= */
+
+.hero-search {
+    position: relative;
+    z-index: 3;
+
+    padding: 74px 0 82px;
+
+    background: #f8fafc;
+}
+
+.search-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-intro h2 {
+    margin: 10px 0 8px;
+
+    color: #172033;
+
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    letter-spacing: -0.03em;
+}
+
+.search-intro p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 14px;
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .hero-visual {
+        min-height: 560px;
+    }
+
+    .hero-copy {
+        padding: 85px 0;
+    }
+
+    .hero-copy h1 {
+        font-size: 45px;
+    }
+
+    .hero-copy p {
+        font-size: 15px;
+    }
+
+    .hero-search {
+        padding: 58px 0 65px;
+    }
+
+    .search-intro h2 {
+        font-size: 26px;
+    }
+
+    .hero-search .search-box {
+        flex-direction: column;
+        padding: 8px;
+    }
+
+    .hero-search .search-button {
+        width: 100%;
+    }
+}

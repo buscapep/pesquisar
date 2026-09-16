@@ -1,0 +1,27 @@
+/* =========================================================
+ADVERTISEMENTS
+========================================================= */
+
+.advertising-section {
+    padding: 22px 0;
+    background: var(--color-background);
+}
+
+.advertising-secondary {
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+
+.ad-placeholder {
+    min-height: 90px;
+    border: 1px dashed #d6dce3;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a3adb8;
+    background: #fafbfc;
+    font-size: 0.65rem;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}

@@ -1,0 +1,149 @@
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+     .main-nav {
+        gap: 17px;
+    }
+
+    .header-status {
+        display: none;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .information-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .methodology-panel {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    
+}
+
+@media (max-width: 680px) {
+
+     .container {
+        width: min(100% - 28px, var(--container-width));
+    }
+
+    .site-header {
+        height: 62px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 52px 0 45px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        font-size: 0.88rem;
+    }
+
+    .search-box {
+        flex-direction: column;
+        padding: 7px;
+    }
+
+    .search-input-wrapper {
+        min-height: 46px;
+    }
+
+    .search-button {
+        width: 100%;
+        min-height: 45px;
+    }
+
+    .search-note {
+        flex-wrap: wrap;
+        line-height: 1.4;
+    }
+
+    .results-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-item,
+    .info-item:nth-child(2n),
+    .info-item:nth-last-child(-n + 2) {
+        border-right: none;
+        border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .info-item:last-child {
+        border-bottom: none;
+    }
+
+    .methodology-panel {
+        padding: 25px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    
+}
+
+@media (max-width: 420px) {
+
+     .brand-text {
+        font-size: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .card-header {
+        flex-direction: column;
+    }
+
+    .badge-status {
+        align-self: flex-start;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+
+}

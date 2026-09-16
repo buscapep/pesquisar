@@ -1,0 +1,221 @@
+/* =========================================================
+   ABOUT — PEP INFO
+   ========================================================= */
+
+.about-section {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 24px;
+    background: linear-gradient(
+            135deg,
+            rgba(9, 25, 52, 0.97),
+            rgba(18, 48, 86, 0.94)
+        );
+}
+
+.about-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+
+.about-header {
+    max-width: 820px;
+    margin: 0px 0px 100px 0;
+    text-align: left;
+}
+
+.about-header .section-kicker {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: #8eb3ff;
+}
+
+.about-header h2 {
+    margin: 0;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    color: #ffffff;
+}
+
+.about-header h2 span {
+    display: inline;
+    color: #8eb3ff;
+}
+
+.about-header p {
+    max-width: 760px;
+    margin: 22px auto 0;
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.76);
+    margin-left: 0;
+}
+
+/* Conteúdo */
+
+.about-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    gap: 70px;
+    align-items: start;
+}
+
+.about-text h3 {
+    margin: 0 0 20px;
+    font-size: 25px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.about-text p {
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-text strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Recursos */
+
+.about-features {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.about-feature {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 16px;
+    align-items: start;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.about-feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: rgba(142, 179, 255, 0.12);
+    color: #8eb3ff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.about-feature h3 {
+    margin: 2px 0 7px;
+    font-size: 16px;
+    line-height: 1.35;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.about-feature p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.68);
+}
+
+/* Aviso */
+
+.about-notice {
+    margin-top: 64px;
+    padding: 20px 24px;
+    border: 1px solid rgba(142, 179, 255, 0.25);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.about-notice strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Responsivo */
+
+@media (max-width: 900px) {
+    .about-section {
+        padding: 80px 24px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .about-text {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-section {
+        padding: 70px 20px;
+    }
+
+    .about-header {
+        margin-bottom: 48px;
+    }
+
+    .about-header h2 {
+        font-size: 32px;
+    }
+
+    .about-header p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .about-text h3 {
+        font-size: 22px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .about-feature {
+        grid-template-columns: 40px 1fr;
+        gap: 14px;
+        padding: 17px;
+    }
+
+    .about-feature-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .about-notice {
+        margin-top: 48px;
+        padding: 18px;
+        font-size: 13px;
+    }
+}
